@@ -1,4 +1,4 @@
-package services;
+package br.senai.lab365.petshop.services;
 
 import org.springframework.stereotype.Service;
 

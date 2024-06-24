@@ -1,6 +1,6 @@
-package repositories;
+package br.senai.lab365.petshop.repositories;
 
-import models.Pet;
+import br.senai.lab365.petshop.models.Pet;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -31,6 +31,10 @@ public class PetRepository {
 
     public void deletarPetPorId(int id){
         pets.removeIf(pet -> id == pet.getId());
+    }
+
+    public void removerPet(Pet pet) {
+        pets.remove(pet);
     }
 
 }

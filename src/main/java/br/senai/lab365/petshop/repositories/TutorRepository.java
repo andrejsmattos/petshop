@@ -1,6 +1,6 @@
-package repositories;
+package br.senai.lab365.petshop.repositories;
 
-import models.Tutor;
+import br.senai.lab365.petshop.models.Tutor;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package models;
+package br.senai.lab365.petshop.models;
 
 public class Pet {
 
@@ -9,6 +9,15 @@ public class Pet {
     public String sexo;
     public String dataNascimento;
     public double peso;
+
+    public Pet(String nome, String especie, String raca, String sexo, String dataNascimento, double peso) {
+        this.nome = nome;
+        this.especie = especie;
+        this.raca = raca;
+        this.sexo = sexo;
+        this.dataNascimento = dataNascimento;
+        this.peso = peso;
+    }
 
     public int getId() {
         return id;
