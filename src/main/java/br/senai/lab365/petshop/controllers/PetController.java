@@ -50,4 +50,11 @@ public class PetController {
                 ? ResponseEntity.ok("Pet atualizado com sucesso!")
                 : ResponseEntity.status(HttpStatus.NOT_FOUND).body("O pet com este id não foi encontrado.");
     }
+
+    @PutMapping("/{petId}/tutor/{tutorId}")
+    public ResponseEntity<String> vincularTutor (@PathVariable int petId, @PathVariable int tutorId){
+        return petService.vincularPetAoTutor(petId, tutorId)
+                ? ResponseEntity.ok("Pet vinculado ao tutor com sucesso!")
+                : ResponseEntity.status(HttpStatus.NOT_FOUND).body("O pet ou o tutor com este id não foi encontrado.");
+    }
 }

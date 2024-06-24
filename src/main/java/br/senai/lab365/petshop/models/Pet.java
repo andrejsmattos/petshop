@@ -4,19 +4,21 @@ public class Pet {
 
     public int id;
     public String nome;
+    public Tutor tutor;
     public String especie;
     public String raca;
     public String sexo;
     public String dataNascimento;
     public double peso;
 
-    public Pet(String nome, String especie, String raca, String sexo, String dataNascimento, double peso) {
+    public Pet(String nome, Tutor tutor, String especie, String raca, String sexo, String dataNascimento, double peso) {
         this.nome = nome;
         this.especie = especie;
         this.raca = raca;
         this.sexo = sexo;
         this.dataNascimento = dataNascimento;
         this.peso = peso;
+        this.tutor = tutor;
     }
 
     public int getId() {
@@ -73,5 +75,13 @@ public class Pet {
 
     public void setPeso(double peso) {
         this.peso = peso;
+    }
+
+    public Tutor getTutor() {
+        return tutor;
+    }
+
+    public void setTutor(Tutor tutor) {
+        this.tutor = tutor;
     }
 }
