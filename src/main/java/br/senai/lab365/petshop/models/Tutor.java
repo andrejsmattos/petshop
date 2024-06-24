@@ -2,6 +2,7 @@ package br.senai.lab365.petshop.models;
 
 public class Tutor {
 
+    public int id;
     public String nome;
     public String telefone;
     public String email;
@@ -9,10 +10,19 @@ public class Tutor {
     public Tutor() {
     }
 
-    public Tutor(String nome, String telefone, String email) {
+    public Tutor(int id, String nome, String telefone, String email) {
+        this.id = id;
         this.nome = nome;
         this.telefone = telefone;
         this.email = email;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNome() {

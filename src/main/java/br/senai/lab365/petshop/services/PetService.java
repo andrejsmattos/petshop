@@ -41,7 +41,6 @@ public class PetService {
         return false;
     }
 
-
     public boolean deletarPet(int id) {
         var petExcluir = petRepository.listarPetPorId(id);
         if (petExcluir != null) {

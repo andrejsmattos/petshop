@@ -40,7 +40,7 @@ public class PetController {
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deletar(@PathVariable int id){
         return petService.deletarPet(id)
-                ? ResponseEntity.ok("Excluído com sucesso!")
+                ? ResponseEntity.ok("Pet removido com sucesso!")
                 : ResponseEntity.status(HttpStatus.NOT_FOUND).body("O pet com este id não foi encontrado.");
     }
 

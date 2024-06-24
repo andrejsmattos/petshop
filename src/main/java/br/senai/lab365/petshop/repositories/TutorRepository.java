@@ -10,8 +10,26 @@ import java.util.List;
 public class TutorRepository {
 
     private static List<Tutor> tutores = new ArrayList<>();
-
     private static int ultimoId;
 
+    public List<Tutor> listar(){
+        return tutores;
+    }
+
+    public Tutor listarTutorPorId(int id){
+        return tutores.stream()
+                .filter(tutor -> id == tutor.getId())
+                .findFirst()
+                .orElse(null);
+    }
+
+    public void adicionarTutor(Tutor tutor){
+        tutor.setId(++ultimoId);
+        tutores.add(tutor);
+    }
+
+    public void removerTutor(Tutor tutor){
+        tutores.remove(tutor);
+    }
 
 }

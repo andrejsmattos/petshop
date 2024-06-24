@@ -10,7 +10,6 @@ import java.util.List;
 public class PetRepository {
 
     private static final List<Pet> pets = new ArrayList<>();
-
     private static int ultimoId;
 
     public List<Pet> listar(){
